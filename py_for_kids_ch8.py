@@ -93,4 +93,33 @@ moving
 moving
 >>> harold.eat_leaves_from_trees()
 eating leaves
+>>> reginald.feed_young_with_milk()
+feeding young
+>>> import turtle
+>>> avery = turlte.Pen()
+
+Traceback (most recent call last):
+  File "<pyshell#83>", line 1, in <module>
+    avery = turlte.Pen()
+NameError: name 'turlte' is not defined
+>>> avery=turtle.Pen()
+>>> kate=turtle.Pen()
+>>> avery.forward(50)
+>>> kate.left(90)
+>>> kate.forward(100)
+>>> avery.right(90)
+>>> avery.forward(100)
+>>> jacob = turtle.Pen()
+>>> jacob.left(180)
+>>> jacob.forward(20)
+>>> jacob.right(90)
+>>> jacob.forward(100)
+>>> jacob.forward(20)
+>>> jacob.right(90)
+>>> jacob.forward(100)
+>>> jacob.right(90)
+>>> jacob.forward(50)
+>>> avery.forward(20)
+>>> kate.forward(50)
+>>> ### paused at page 104 ###
 >>> 
