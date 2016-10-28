@@ -190,4 +190,62 @@ Traceback (most recent call last):
 NameError: name 'tKColorChooser' is not defined
 >>> tkColorChooser.askcolor()
 ((116, 174, 220), '#74aedc')
+>>> mycolor=((116, 174, 220), '#74aedc')
+>>> mycolor[1]
+'#74aedc'
+>>> import pickle
+>>> save_file=open('mycolor.dat', 'wb')
+>>> pickle.dump(mycolor, save_file)
+>>> save_file.close()
+>>> load_file=open('mycolor.dat', 'rb')
+>>> pickle.load(load_file)
+((116, 174, 220), '#74aedc')
+>>> myloaded_color= pickle.load(load_file)
+
+Traceback (most recent call last):
+  File "<pyshell#71>", line 1, in <module>
+    myloaded_color= pickle.load(load_file)
+  File "/usr/lib/python2.7/pickle.py", line 1384, in load
+    return Unpickler(file).load()
+  File "/usr/lib/python2.7/pickle.py", line 864, in load
+    dispatch[key](self)
+  File "/usr/lib/python2.7/pickle.py", line 886, in load_eof
+    raise EOFError
+EOFError
+>>> load_file.close()
+>>> load_file=open('mycolor.dat', 'rb')
+>>> myloaded_color= pickle.load(load_file)
+>>> load_file.close()
+>>> print (myloaded_color)
+((116, 174, 220), '#74aedc')
+>>> c=tkColorChooser.askcolor()
+>>> print (c[1])
+#80b6db
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> def random_rectangle(width, height, fill_color) :
+	x1=random.randrange(width)
+	y1=random.randrange(height)
+	x2=x1+random.randrange(width)
+	y2=y1 + random.randrange(height)
+	canvas.create_rectangle(x1,y1,x2,y2, fill=fill_color)
+
+	
+>>> random_rectangle(400, 400, c[1])
+
+Traceback (most recent call last):
+  File "<pyshell#83>", line 1, in <module>
+    random_rectangle(400, 400, c[1])
+  File "<pyshell#82>", line 2, in random_rectangle
+    x1=random.randrange(width)
+NameError: global name 'random' is not defined
+>>> import random
+>>> random_rectangle(400, 400, c[1])
+>>> window.mainloop()
+>>> 
+>>> window = tk.Tk()
+>>> canvas=tk.Canvas(window, width=600, height=600)
+>>> canvas.pack()
+>>> random_rectangle(400, 400, myloaded_color[1])
+>>> window.mainloop()
 >>> 
