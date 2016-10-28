@@ -249,3 +249,262 @@ NameError: global name 'random' is not defined
 >>> random_rectangle(400, 400, myloaded_color[1])
 >>> window.mainloop()
 >>> 
+>>> window=tk.Tk()
+>>> master=tk.Tk()
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> random_rectangle(400, 400, myloaded_color[1])
+>>> window.mainloop()
+>>> master=tk.Tk()
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> random_rectangle(400, 400, myloaded_color[1])
+>>> window.mainloop()
+>>> 
+>>> master=tk.Tk()
+>>> canvas=tk.Canvas(600, 600)
+
+Traceback (most recent call last):
+  File "<pyshell#107>", line 1, in <module>
+    canvas=tk.Canvas(600, 600)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2234, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2085, in __init__
+    BaseWidget._setup(self, master, cnf)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2063, in _setup
+    self.tk = master.tk
+AttributeError: 'int' object has no attribute 'tk'
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.create_arc(10, 10, 200, 100, extent=180, style=ARC)
+
+Traceback (most recent call last):
+  File "<pyshell#109>", line 1, in <module>
+    canvas.create_arc(10, 10, 200, 100, extent=180, style=ARC)
+NameError: name 'ARC' is not defined
+>>> canvas.create_arc(10, 10, 200, 100, extent=180)
+1
+>>> window.mainloop()
+>>> master=tk.Tk()
+>>> canvas=tk.Canvas(600, 600)
+
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    canvas=tk.Canvas(600, 600)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2234, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2085, in __init__
+    BaseWidget._setup(self, master, cnf)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2063, in _setup
+    self.tk = master.tk
+AttributeError: 'int' object has no attribute 'tk'
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> canvas.create_arc(10, 10, 200, 100, extent=180)
+1
+>>> window.mainloop()
+>>> 
+>>> 
+master=tk.Tk()
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> canvas.create_arc(10, 10, 200, 100)
+1
+>>> window.mainloop()
+>>> 
+>>> master=tk.Tk()
+>>> width=600
+>>> height=600
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 10, 200, 80, extent=45)
+1
+>>> master.mainloop()
+>>> canvas.create_arc(10, 10, 200, 80, extent=45)
+
+Traceback (most recent call last):
+  File "<pyshell#132>", line 1, in <module>
+    canvas.create_arc(10, 10, 200, 80, extent=45)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2312, in create_arc
+    return self._create('arc', args, kw)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2309, in _create
+    *(args + self._options(cnf, kw))))
+TclError: invalid command name ".140512897205960"
+>>> canvas=tk.Canvas()
+>>> canvas.create_arc(10, 10, 200, 80, extent=45)
+1
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.create_arc(10, 80, 200, 160, extent=90)
+1
+>>> master.mainloop()
+>>> canvas.pack()
+
+Traceback (most recent call last):
+  File "<pyshell#140>", line 1, in <module>
+    canvas.pack()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1944, in pack_configure
+    + self._options(cnf, kw))
+TclError: can't invoke "pack" command: application has been destroyed
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 80, 200, 160, extent=90)
+1
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 160, 200, 240, extent=135)
+1
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 160, 180, 240, extent=135)
+1
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.create_arc(10, 240, 200, 400, extent=180)
+1
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.create_arc(10, 240, 200, 400, extent=180)
+1
+>>> canvas.pack()
+>>> master.mainloop()
+>>> 
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 240, 200, 400, extent=180)
+1
+>>> master.mainloop()
+>>> 
+>>> 
+=============================== RESTART: Shell ===============================
+>>> import Tkinter as tk
+>>> import ttk
+>>> import tkColorChooser
+>>> master=tk.Tk()
+>>> width=600
+>>> height=600
+>>> canvas=tk.Canvas()
+>>> canvas.pack
+<bound method Canvas.pack_configure of <Tkinter.Canvas instance at 0x7f5c07b0bcb0>>
+>>> canvas.pack()
+>>> canvas.create_arc(10, 320, 200, 400, extent=359)
+1
+>>> master.mainloop()
+>>> canvas=tk.Canvas()
+>>> canvas.pack()
+>>> canvas.create_arc(10, 320, 200, 400, extent=359)
+1
+>>> master.mainloop()
+>>> canvas=tk.Canvas(width=600, height=600)
+>>> canvas.pack()
+>>> canvas.create_arc(10, 320, 200, 400, extent=359)
+1
+>>> master.mainloop()
+>>> 
+>>> 
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=400, height=400)
+>>> canvas.pack()
+>>> canvas.create_polygon(10,10, 100, 10, 100, 110, fill="", outline="black")
+1
+>>> app.mainloop()
+>>> 
+>>> canvas=tk.Canvas(app, width=400, height=400)
+
+Traceback (most recent call last):
+  File "<pyshell#197>", line 1, in <module>
+    canvas=tk.Canvas(app, width=400, height=400)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2234, in __init__
+    Widget.__init__(self, master, 'canvas', cnf, kw)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2094, in __init__
+    (widgetName, self._w) + extra + self._options(cnf))
+TclError: can't invoke "canvas" command: application has been destroyed
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=400, height=400)
+>>> canvas.pack()
+>>> canvas.create_polygon(10,10, 100, 10, 100, 110, fill="", outline="black")
+1
+>>> app.mainloop()
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=400, height=400)
+>>> canvas.pack()
+>>> canvas.create_polygon(10,10, 100, 10, 100, 110, fill="red", outline="black")
+1
+>>> app.mainloop()
+>>> 
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=400, height=400)
+>>> canvas.pack()
+>>> canvas.create_text(150, 100, text="There once was a man from Toulouse")
+1
+>>> canvas.create_text(130, 120, text='Who rode around on a moose')
+2
+>>> canvas.create_text(130, 120, text='Who rode around on a moose', fill='red')
+3
+>>> canvas.create_text(150, 150, text='He said, "It\'s my curse,', font=('Times', 15))
+4
+>>> canvas.create_text(200, 200, text='But it could be worse,', font=("Helvetica", 20))
+5
+>>> canvas.create_text(220, 250, text='My cousin rides around', font=('Courrier', 22))
+6
+>>> canvas.create_text(220, 300, text='on a goose."', font=('Courrier', 30))
+7
+>>> app.mainloop()
+>>> 
+>>> 
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=600, height=600)
+>>> canvas.pack()
+>>> my_image=tk.PhotoImage(file='me.gif')
+>>> canvas.create_image(0,0, anchor=NW, image=myimage)
+
+Traceback (most recent call last):
+  File "<pyshell#226>", line 1, in <module>
+    canvas.create_image(0,0, anchor=NW, image=myimage)
+NameError: name 'NW' is not defined
+>>> canvas.create_image(0,0, anchor=NW, image=myimage)
+
+Traceback (most recent call last):
+  File "<pyshell#227>", line 1, in <module>
+    canvas.create_image(0,0, anchor=NW, image=myimage)
+NameError: name 'NW' is not defined
+
+>>> canvas.create_image(0,0,anchor='NW', image=myimage)
+
+Traceback (most recent call last):
+  File "<pyshell#228>", line 1, in <module>
+    canvas.create_image(0,0,anchor='NW', image=myimage)
+NameError: name 'myimage' is not defined
+>>> canvas.create_image(0,0,anchor='NW', image=my_image)
+
+Traceback (most recent call last):
+  File "<pyshell#229>", line 1, in <module>
+    canvas.create_image(0,0,anchor='NW', image=my_image)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2318, in create_image
+    return self._create('image', args, kw)
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 2309, in _create
+    *(args + self._options(cnf, kw))))
+TclError: bad anchor position "NW": must be n, ne, e, se, s, sw, w, nw, or center
+>>> canvas.create_image(0,0,anchor=nw, image=my_image)
+
+Traceback (most recent call last):
+  File "<pyshell#230>", line 1, in <module>
+    canvas.create_image(0,0,anchor=nw, image=my_image)
+NameError: name 'nw' is not defined
+>>> canvas.create_image(0,0,anchor='nw', image=my_image)
+2
+>>> app.mainloop()
+>>> app=tk.Tk()
+>>> canvas=tk.Canvas(app, width=1600, height=1600)
+>>> canvas.pack()
+>>> my_image=tk.PhotoImage(file='me.gif')
+>>> canvas.create_image(0,0,anchor='nw', image=my_image)
+1
+>>> app.mainloop()
+>>> 
